@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Title Effect</title>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="gradient-text">Trading Dashboard</h1>
+    </header>
+    
+    <div class="container">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container" style="max-width: 90%;">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+            "height": "600",
+            "width": "2000",
+            "symbol": "AMEX:SPY",
+            "interval": "5",
+            "timezone": "Etc/UTC",
+            "theme": "light",
+            "style": "1",
+            "locale": "en",
+            "enable_publishing": false,
+            "backgroundColor" : "rgba(234,238,246,1)",
+            "allow_symbol_change": true,
+            "calendar": false,
+            "studies": [
+            "STD;VWAP"
+            ],
+            "support_host": "https://www.tradingview.com"
+            }
+            </script>
+        </div>
+
+        <div class="tradingview-widget-container" style="max-width: 90%;">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
+            {
+            "dataSource": "SPX500",
+            "grouping": "sector",
+            "blockSize": "Value.Traded|1W",
+            "blockColor": "change",
+            "locale": "en",
+            "symbolUrl": "",
+            "colorTheme": "light",
+            "hasTopBar": false,
+            "isDataSetEnabled": true,
+            "isZoomEnabled": false,
+            "hasSymbolTooltip": true,
+            "height": "500",
+            "width": "2000"
+          }
+            </script>
+          </div>
+        <!-- TradingView Widget END -->
+    <h1 class="gradient-text">Macros</h1>
+
+    <div class="cards">
+        <article class="econcontainer">
+            <span class="tag">Economic Calendar</span>
+            <div class="econCalendar" style="overflow: hidden; max-width: 90%;">
+                <iframe class = "iframereal" src="https://tradingeconomics.com/calendar" width="988px" height="459px"></iframe>
+            </div>
+        </article>
+        <div class="corner [ card ]">
+            <article class="information [ card ]">
+                <span class="tag">Daily Chart</span>
+                <h2 class="title">S&P 500</h2>
+                <div class="tradingview-widget-container" style="height:100%;width:100%;">
+                    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                    "width": "300",
+                    "height": "300",
+                    "symbol": "SPY",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "light",
+                    "style": "3",
+                    "locale": "en",
+                    "hide_legend": true,
+                    "enable_publishing": false,
+                    "gridColor": "rgba(234,238,246,0)",
+                    "hide_top_toolbar": true,
+                    "range": "12M",
+                    "save_image": false,
+                    "calendar": false,
+                    "hide_volume": true,
+                    "support_host": "https://www.tradingview.com"
+                }
+                </script>
+                </div>
+            </article>       
+        </div>
+    </div>
+    <div class="cards 2">
+        <div class="corner 2 [ card ]">
+            <article class="information [ card ]">
+                <span class="tag">Daily Chart</span>
+                <h2 class="title">Gold</h2>
+                <div class="tradingview-widget-container" style="height:100%;width:100%;">
+                    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                    "width": "300",
+                    "height": "300",
+                    "symbol": "GOLD",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "light",
+                    "style": "3",
+                    "locale": "en",
+                    "hide_legend": true,
+                    "enable_publishing": false,
+                    "gridColor": "rgba(234,238,246,0)",
+                    "hide_top_toolbar": true,
+                    "range": "12M",
+                    "save_image": false,
+                    "calendar": false,
+                    "hide_volume": true,
+                    "support_host": "https://www.tradingview.com"
+                }
+                </script>
+                </div>
+            </article>       
+        </div>
+        <div class="corner 3 [ card ]">
+            <article class="information [ card ]">
+                <span class="tag">Daily Chart</span>
+                <h2 class="title">High Yield Bonds</h2>
+                <div class="tradingview-widget-container" style="height:100%;width:100%;">
+                    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                    "width": "300",
+                    "height": "300",
+                    "symbol": "HYG",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "light",
+                    "style": "3",
+                    "locale": "en",
+                    "hide_legend": true,
+                    "enable_publishing": false,
+                    "gridColor": "rgba(234,238,246,0)",
+                    "hide_top_toolbar": true,
+                    "range": "12M",
+                    "save_image": false,
+                    "calendar": false,
+                    "hide_volume": true,
+                    "support_host": "https://www.tradingview.com"
+                }
+                </script>
+                </div>
+            </article>       
+        </div>
+        <div class="corner 4 [ card ]">
+            <article class="information [ card ]">
+                <span class="tag2">Indices</span>
+                <h2 class="title">CBOE Volatility Index</h2>
+                <div class="tradingview-widget-container" style="height:100%;width:100%;">
+                    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                    "width": "300",
+                    "height": "300",
+                    "symbol": "VIX",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "light",
+                    "style": "3",
+                    "locale": "en",
+                    "hide_legend": true,
+                    "enable_publishing": false,
+                    "gridColor": "rgba(234,238,246,0)",
+                    "hide_top_toolbar": true,
+                    "range": "12M",
+                    "save_image": false,
+                    "calendar": false,
+                    "hide_volume": true,
+                    "support_host": "https://www.tradingview.com"
+                }
+                </script>
+                </div>
+            </article>       
+        </div>
+        <div class="corner 5 [ card ]">
+            <article class="information [ card ]">
+                <span class="tag2">Indices</span>
+                <h2 class="title">Put/Call Ratio</h2>
+                <div class="tradingview-widget-container" style="height:100%;width:100%;">
+                    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                    "width": "300",
+                    "height": "300",
+                    "symbol": "PCC",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "light",
+                    "style": "3",
+                    "locale": "en",
+                    "hide_legend": true,
+                    "enable_publishing": false,
+                    "gridColor": "rgba(234,238,246,0)",
+                    "hide_top_toolbar": true,
+                    "range": "12M",
+                    "save_image": false,
+                    "calendar": false,
+                    "hide_volume": true,
+                    "support_host": "https://www.tradingview.com"
+                }
+                </script>
+                </div>
+            </article>       
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <div class="cards">
+        <div class="corner 6 [ card ]">
+            <article class="information [ card ]">
+                <span class="tag2">Daily Internal</span>
+                <h2 class="title">Volume Difference</h2>
+                <div class="tradingview-widget-container" style="height:100%;width:100%;">
+                    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                    "width": "300",
+                    "height": "300",
+                    "symbol": "UVOL-DVOL",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "light",
+                    "style": "3",
+                    "locale": "en",
+                    "hide_legend": true,
+                    "enable_publishing": false,
+                    "gridColor": "rgba(234,238,246,0)",
+                    "hide_top_toolbar": true,
+                    "save_image": false,
+                    "calendar": false,
+                    "hide_volume": true,
+                    "support_host": "https://www.tradingview.com"
+                }
+                </script>
+                </div>
+            </article>       
+        </div>
+        <div class="corner 7 [ card ]">
+            <article class="information [ card ]">
+                <span class="tag2">5 Minute Internal</span>
+                <h2 class="title">Tick Ratio</h2>
+                <div class="tradingview-widget-container" style="height:100%;width:100%;">
+                    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                    "width": "300",
+                    "height": "300",
+                    "symbol": "TICK",
+                    "interval": "5",
+                    "timezone": "Etc/UTC",
+                    "theme": "light",
+                    "style": "3",
+                    "locale": "en",
+                    "hide_legend": true,
+                    "enable_publishing": false,
+                    "gridColor": "rgba(234,238,246,0)",
+                    "hide_top_toolbar": true,
+                    "save_image": false,
+                    "calendar": false,
+                    "hide_volume": true,
+                    "support_host": "https://www.tradingview.com"
+                }
+                </script>
+                </div>
+            </article>       
+        </div>
+    </div>
+    <h1 class="gradient-text">Helpful Websites</h1>
+    <div class="cards">
+        <article class="econcontainer">
+            <span class="tag">Unusual Whales</span>
+            <div class="econCalendar" style="overflow: hidden; max-width: 100%;">
+                <iframe class = "iframereal2" src="https://unusualwhales.com/stock/SPX/greek-exposure?tab=Gamma" width="1800px" height="1000px"></iframe>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
+
+</div>    

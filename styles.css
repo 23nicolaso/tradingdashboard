@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+	padding-top:10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15vmin;
+    line-height: 20vmin;
+}
+
+.iframereal{
+	margin-top:-120px;
+	margin-left:-10px;
+}
+
+.tradingview-widget-container {
+    max-width: 99.9%; /* Adjust the width as needed */
+    max-height: 100%; /* Adjust the height as needed */
+}
+
+
+header, .container {
+    display: block; /* This ensures that both elements are block-level, causing the container to start on a new line */
+    width: 90%; /* This makes sure they take up the full width of their parent, pushing subsequent content to a new line */
+}
+body {
+    /* Removed height: 75vh to allow the body to expand based on content */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Ensure content is laid out top to bottom */
+    align-items: center;
+    justify-content: flex-start; /* Start aligning content from the top */
+    padding-top: 20px; /* Add some padding at the top */
+}
+
+header {
+    width: 100%; /* Ensure header takes full width */
+    text-align: center; /* Center the header text */
+    margin-bottom: 20px; /* Add some margin below the header for spacing */
+}
+
+.tradingeconomics, .tradingview-widget-container {
+    margin-top: 20px; /* Add margin at the top for spacing */
+}
+
+/* Ensure .container and its children (.cards) are properly aligned and spaced */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    width: 100%; /* Take full width to contain its children properly */
+    margin-top: 20px; /* Add some space above the container */
+}
+
+.econCalendar {
+	margin-top : 20px;
+	border-radius: 2px;
+}
+.econcontainer {
+	padding:1.5rem;
+	border-radius:20px;
+	box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+	background-color: var(--c-white);
+	
+	.tag {
+		display: inline-block;
+		background-color: var(--c-fair-pink);
+		color: var(--c-coffee);
+		font-weight: 600;
+		font-size: 0.875rem;
+		padding: 0.5em 0.75em;
+		line-height: 1;
+		border-radius: 6px;
+		& + * {
+			margin-top: 1rem;
+		}
+	}
+}
+
+.cards {
+    width: 90%; /* Adjust width as needed */
+    max-width: 1000px; /* Set a max-width for larger screens */
+    justify-content: center; /* Center the cards within the container */
+    gap: 2.5rem; /* Keep a gap between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+.gradient-text {
+    color: transparent;
+    background: conic-gradient(
+        #D9D7F1 12%, 
+        #BAABDA 12%, #BAABDA 33%, 
+        #E7FBBE 33%, #E7FBBE 55%, 
+        #FFCBCB 55%, #FFCBCB 70%, 
+        #B5DEFF 70%, #B5DEFF 87%, 
+        #F7D1BA 87%);
+    background-size: 50%;
+    background-clip: text;  
+    -webkit-background-clip: text;
+    animation: expand-rev 0.5s ease forwards;
+    cursor: pointer;
+    text-align: center;
+}
+.gradient-text:hover {
+    animation: expand 0.5s ease forwards;
+}
+@keyframes expand {
+    0% {
+        background-size: 50%;
+        background-position: 0 0;
+    }
+    20% {
+        background-size: 55%;
+        background-position: 0 1em;
+    }
+    100% {
+        background-size: 325%;
+        background-position: -10em -4em;
+    }
+}
+@keyframes expand-rev {
+    0% {
+        background-size: 325%;
+        background-position: -10em -4em;
+    }
+    20% {
+        background-size: 55%;
+        background-position: 0 1em;
+    }
+    100% {
+        background-size: 50%;
+        background-position: 0 0;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+.square-container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	max-width: 90%; /* Adjust based on preference */
+	height: 200%; /* Adjust based on preference */
+}
+.corner {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+:root {
+	--c-white: #fff;
+	--c-black: #000;
+
+	--c-ash: #eaeef6;
+	--c-charcoal: #a0a0a0;
+	--c-void: #141b22;
+
+	--c-fair-pink: #FFEDEC;
+	--c-apricot: #FBC8BE;
+	--c-coffee: #754D42;
+	--c-del-rio: #917072;
+
+	--c-java: #1FCAC5;
+
+	--c-titan-white: #f1eeff;
+	--c-cold-purple: #a69fd6;
+	--c-indigo: #6558d3;
+	--c-governor: #4133B7;
+}
+
+body {
+	font-family: "Spline Sans", sans-serif;
+	line-height: 1.5;
+	min-height: 100vh;
+	background-color: var(--c-ash);
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2.5rem;
+	width: 90%;
+	max-width: 100%;
+	margin-top: 5vh;
+}
+
+.card {
+	border-radius: 16px;
+	box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+	max-width: 315px;
+}
+
+.information {
+	background-color: var(--c-white);
+	padding: 1.5rem;
+
+	.tag {
+		display: inline-block;
+		background-color: var(--c-titan-white);
+		color: var(--c-indigo);
+		font-weight: 600;
+		font-size: 0.875rem;
+		padding: 0.5em 0.75em;
+		line-height: 1;
+		border-radius: 6px;
+		& + * {
+			margin-top: 1rem;
+		}
+	}
+
+	.tag2 {
+		display: inline-block;
+		background-color: var(--c-fair-pink);
+		color: var(--c-coffee);
+		font-weight: 600;
+		font-size: 0.875rem;
+		padding: 0.5em 0.75em;
+		line-height: 1;
+		border-radius: 6px;
+		& + * {
+			margin-top: 1rem;
+		}
+	}
+
+	.title {
+		font-size: 1.5rem;
+		color: var(--c-void);
+		line-height: 1.25;
+		& + * {
+			margin-top: 1rem;
+		}
+	}
+
+	.info {
+		color: var(--c-charcoal);
+		& + * {
+			margin-top: 1.25rem;
+		}
+	}
+
+	.button {
+		font: inherit;
+		line-height: 1;
+		background-color: var(--c-white);
+		border: 2px solid var(--c-indigo);
+		color: var(--c-indigo);
+		padding: 0.5em 1em;
+		border-radius: 6px;
+		font-weight: 500;
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		&:hover,
+		&:focus {
+			background-color: var(--c-indigo);
+			color: var(--c-white);
+		}
+	}
+	
+	.details {
+		display: flex;
+		gap: 1rem;
+		div {
+			padding: .75em 1em;
+			background-color: var(--c-titan-white);
+			border-radius: 8px;
+			display: flex;
+			flex-direction: column-reverse;
+			gap: .125em;
+			flex-basis: 50%;
+		}
+		
+		dt {
+			font-size: .875rem;
+			color: var(--c-cold-purple);
+		}
+		
+		dd {
+			color: var(--c-indigo);
+			font-weight: 600;
+			font-size: 1.25rem;
+		}
+	}
+}
+
+
+.plan {
+	padding: 10px;
+	background-color: var(--c-white);
+	color: var(--c-del-rio);
+	
+	strong {
+		font-weight: 600;
+		color: var(--c-coffee);
+	}
+	
+	.inner {
+		padding: 20px;
+		padding-top: 40px;
+		background-color: var(--c-fair-pink);
+		border-radius: 12px;
+	position: relative;
+		overflow: hidden;
+	}
+	
+	.pricing {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: var(--c-apricot);
+		border-radius: 99em 0 0 99em;
+		display: flex;
+		align-items: center;
+		padding: .625em .75em;
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: var(--c-coffee);
+		small {
+			color: var(--c-del-rio);
+			font-size: .75em;
+			margin-left: .25em;
+		}
+		
+	}
+	
+	.title {
+		font-weight: 600;
+		font-size: 1.25rem;
+		color: var(--c-coffee);
+		& + * {
+			margin-top: .75rem;
+		}
+	}
+	
+	.info {
+		& + * {
+			margin-top: 1rem;
+		}
+	}
+	
+	.features {
+		display: flex;
+		flex-direction: column;
+		li {
+			display: flex;
+			align-items: center;
+			gap: .5rem;
+			& + * {
+				margin-top: .75rem;
+			}
+		}
+		
+		.icon {
+			background-color: var(--c-java);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			color: var(--c-white);
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			svg {
+				width: 14px;
+				height: 14px;
+			}
+		}
+		
+		& + * {
+			margin-top: 1.25rem;
+		}
+	}
+	
+	button {
+		font: inherit;
+		background-color: var(--c-indigo);
+		border-radius: 6px;
+		color: var(--c-white);
+		font-weight: 500;
+		font-size: 1.125rem;
+		width: 100%;
+		border: 0;
+		padding: 1em;
+		&:hover,
+		&:focus {
+			background-color: var(--c-governor);
+		}
+	}
+	
+	
+}
